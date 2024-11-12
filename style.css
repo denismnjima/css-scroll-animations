@@ -12,6 +12,11 @@ body{
         transform: translateX(0);
     }
 }
+@keyframes scroller {
+    to {
+       transform: scale(1, 1);
+    }
+   }
 .container .box{
     background-color: whitesmoke;
     width: 400px;
@@ -27,3 +32,15 @@ body{
     animation-timeline: view();
     animation-range: cover 0% cover 100%;
 }
+.scroller {
+    height: 10px;
+    position: fixed;
+    top: 0%;
+    z-index: 100;
+    background-color: #00c2cb;
+    width: 100%;
+    transform: scale(0, 1);
+    transform-origin: left;
+    animation: scroller linear;
+   animation-timeline: scroll();
+  }
